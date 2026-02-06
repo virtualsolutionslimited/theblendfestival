@@ -39,6 +39,17 @@
         object-fit: cover;
         z-index: -1;
       }
+      .page-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(
+          circle at 20% 10%,
+          rgba(200, 190, 129, 0.18) 0%,
+          rgba(7, 7, 7, 0.7) 45%,
+          rgba(7, 7, 7, 0.85) 100%
+        );
+      }
       .calligraphic-title {
         font-family: "Dancing Script", cursive;
         font-size: clamp(3rem, 8vw, 6rem);
@@ -87,8 +98,10 @@
         font-family: "Orbitron", sans-serif;
         font-weight: 700;
         font-size: clamp(1.1rem, 3vw, 1.4rem);
-        color: #000000;
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        color: #eaeaea;
+        text-shadow:
+          2px 2px 6px rgba(0, 0, 0, 0.8),
+          1px 1px 2px rgba(0, 0, 0, 0.7);
         letter-spacing: 0.06em;
         text-transform: uppercase;
         line-height: 1.4;
@@ -222,40 +235,45 @@
       }
     </style>
   </head>
-  <body class="h-screen relative overflow-hidden">
+  <body class="min-h-screen relative overflow-hidden">
     <!-- Background Video -->
     <video autoplay muted loop playsinline class="video-background">
       <source src="singd.mp4" type="video/mp4" />
     </video>
+    <div class="page-overlay" aria-hidden="true"></div>
 
     <!-- Transparent Navigation -->
-    <nav class="fixed top-0 w-full z-50 p-6">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <img src="blendlogo.png" alt="The Brand Logo" class="h-12" />
-        <div class="flex space-x-6">
-          <a
-            href="#"
-            class="text-brand-light hover:text-black transition-colors"
-          >
-            <i class="fab fa-instagram text-xl"></i>
-          </a>
-          <a
-            href="#"
-            class="text-brand-light hover:text-black transition-colors"
-          >
-            <i class="fab fa-facebook text-xl"></i>
-          </a>
+    <nav class="fixed top-0 w-full z-50">
+      <div class="p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <img src="blendlogo.png" alt="The Brand Logo" class="h-12" />
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-brand-light/90 hover:text-brand-gold transition-colors"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-brand-light/90 hover:text-brand-gold transition-colors"
+            >
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- Festival Information positioned left of center -->
-    <div class="h-screen flex items-center justify-center relative z-10">
-      <div class="text-brand-light text-center -ml-20 md:-ml-32">
-        <h1 class="calligraphic-title mb-6" id="festival-title"></h1>
+    <div
+      class="min-h-screen flex items-center justify-center relative z-10 px-6"
+    >
+      <div class="w-full max-w-2xl md:max-w-3xl text-brand-light text-center">
+        <h1 class="calligraphic-title mb-7" id="festival-title"></h1>
         <div class="event-info mb-2">February 14, 2026</div>
         <div class="event-info mb-2">7:00 PM</div>
-        <div class="event-info mb-8">POLO CLUB GARDENS</div>
+        <div class="event-info mb-10">POLO CLUB GARDENS</div>
         <a href="tickets.html" class="ticket-button inline-block"
           >Get Your Tickets</a
         >
