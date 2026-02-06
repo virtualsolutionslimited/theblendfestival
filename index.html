@@ -64,6 +64,11 @@
         position: relative;
         overflow: hidden;
       }
+      @media (max-width: 640px) {
+        .calligraphic-title {
+          font-size: clamp(3.75rem, 12vw, 6rem);
+        }
+      }
       .calligraphic-title::after {
         content: "";
         position: absolute;
