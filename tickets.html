@@ -1,11 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Blend Festival | Tickets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Orbitron:wght@400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-dark": "#070707",
+              "brand-gold": "#C8BE81",
+              "brand-red": "#A51A25",
+              "brand-light": "#EAEAEA",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+      }
+      .page-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(
+          circle at 20% 10%,
+          rgba(200, 190, 129, 0.18) 0%,
+          rgba(7, 7, 7, 0.85) 45%,
+          rgba(7, 7, 7, 0.92) 100%
+        );
+      }
+      .heading-script {
+        font-family: "Dancing Script", cursive;
+      }
+      .heading-block {
+        font-family: "Russo One", sans-serif;
+      }
+      .price-font {
+        font-family: "Orbitron", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-brand-light relative overflow-x-hidden">
+    <video autoplay muted loop playsinline class="video-background">
+      <source src="singd.mp4" type="video/mp4" />
+    </video>
+    <div class="page-overlay" aria-hidden="true"></div>
+
+    <nav class="fixed top-0 w-full z-50 p-6">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="blendlogo.png" alt="The Brand Logo" class="h-12" />
+        </a>
+        <div class="flex items-center gap-6">
+          <a
+            href="index.html"
+            class="text-brand-light/90 hover:text-brand-gold transition-colors heading-block tracking-wider uppercase text-sm"
+          >
+            Back Home
+          </a>
+          <a
+            href="#"
+            class="text-brand-light hover:text-brand-gold transition-colors"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a
+            href="#"
+            class="text-brand-light hover:text-brand-gold transition-colors"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-28 pb-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <div
+            class="heading-script text-brand-gold text-5xl sm:text-6xl leading-none"
+          >
+            Tickets
+          </div>
+          <div
+            class="heading-block uppercase tracking-[0.18em] text-brand-light/90 mt-3"
+          >
+            The Blend Festival • February 14, 2026
+          </div>
+          <div class="price-font text-brand-light/80 mt-4">
+            Choose your experience below
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <section
+            class="rounded-3xl border border-brand-gold/40 bg-black/45 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.45)] overflow-hidden"
+            aria-labelledby="general-access"
+          >
+            <div class="p-7 sm:p-9">
+              <div class="flex items-start justify-between gap-6">
+                <div>
+                  <h2
+                    id="general-access"
+                    class="heading-block text-2xl sm:text-3xl text-brand-gold tracking-wide"
+                  >
+                    General Access
+                  </h2>
+                  <div class="text-brand-light/80 mt-2">
+                    Entry ticket for one person
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="price-font text-3xl sm:text-4xl text-brand-light">
+                    GHS 200
+                  </div>
+                  <div class="text-brand-light/60 text-sm mt-1">per person</div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-brand-light/85"
+                >
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-check text-brand-gold"></i>
+                    Festival entry
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-check text-brand-gold"></i>
+                    Access to performances
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-check text-brand-gold"></i>
+                    Photo moments
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-check text-brand-gold"></i>
+                    Bars & food vendors
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://vsprocessorpro.com/ev/BuyTicket?Id=2168&p=s&tid=4690&comid=1717"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="heading-block w-full sm:w-auto inline-flex items-center justify-center rounded-full px-7 py-4 border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-black transition-colors tracking-wider uppercase"
+                >
+                  Buy General Access
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="rounded-3xl border border-brand-gold/60 bg-black/55 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.45)] overflow-hidden relative"
+            aria-labelledby="table-ten"
+          >
+            <div
+              class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"
+            ></div>
+            <div class="p-7 sm:p-9">
+              <div class="flex items-start justify-between gap-6">
+                <div>
+                  <h2
+                    id="table-ten"
+                    class="heading-block text-2xl sm:text-3xl text-brand-gold tracking-wide"
+                  >
+                    Table for 10
+                  </h2>
+                  <div class="text-brand-light/80 mt-2">
+                    Premium reserved seating for your crew
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="price-font text-3xl sm:text-4xl text-brand-light">
+                    GHS 7500
+                  </div>
+                  <div class="text-brand-light/60 text-sm mt-1">per table</div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-brand-light/85"
+                >
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-star text-brand-gold"></i>
+                    Reserved table (10)
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-star text-brand-gold"></i>
+                    VIP entry lane
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-star text-brand-gold"></i>
+                    Best viewing zones
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-star text-brand-gold"></i>
+                    Dedicated host support
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://vsprocessorpro.com/ev/BuyTicket?Id=2168&p=s&tid=4691&comid=1717"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="heading-block w-full sm:w-auto inline-flex items-center justify-center rounded-full px-7 py-4 bg-brand-gold text-black hover:opacity-90 transition-opacity tracking-wider uppercase"
+                >
+                  Reserve a Table
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <footer class="mt-12 text-center text-brand-light/70 text-sm">
+          <div class="heading-block uppercase tracking-[0.18em]">
+            The Blend Festival
+          </div>
+          <div class="mt-2">Polo Club Gardens • 6:00 PM</div>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
