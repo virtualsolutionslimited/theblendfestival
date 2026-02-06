@@ -39,22 +39,6 @@
         object-fit: cover;
         z-index: -1;
       }
-      .page-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        background: radial-gradient(
-          circle at 20% 10%,
-          rgba(200, 190, 129, 0.18) 0%,
-          rgba(7, 7, 7, 0.7) 45%,
-          rgba(7, 7, 7, 0.85) 100%
-        );
-      }
-      @media (max-width: 640px) {
-        .page-overlay {
-          display: none;
-        }
-      }
       .calligraphic-title {
         font-family: "Dancing Script", cursive;
         font-size: clamp(3rem, 8vw, 6rem);
@@ -250,7 +234,6 @@
     <video autoplay muted loop playsinline class="video-background">
       <source src="singd.mp4" type="video/mp4" />
     </video>
-    <div class="page-overlay" aria-hidden="true"></div>
 
     <!-- Transparent Navigation -->
     <nav class="fixed top-0 w-full z-50">
@@ -334,14 +317,14 @@
       });
     </script>
     <footer
-      class="w-full pb-6 px-6 text-center text-black text-xs sm:text-sm"
+      class="w-full pb-6 px-6 text-center text-brand-light text-xs sm:text-sm"
     >
       Powered by
       <a
         href="https://virtualsolutionsgh.com/"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-brand-gold hover:underline"
+        class="hover:underline text-black"
         >Virtual Solutions</a
       >
       .
